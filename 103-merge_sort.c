@@ -32,7 +32,7 @@ size_t back)
 		buff[k++] = subarr[j];
 	for (i = front, k = 0; i < back; i++)
 		subarr[i] = buff[k++];
-	
+
 	printf("[Done]: ");
 	print_array(subarr + front, back - front);
 }
