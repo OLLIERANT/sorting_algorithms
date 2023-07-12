@@ -52,7 +52,7 @@ void counting_sort(int *array, size_t size)
 		count[array[i]] += 1;
 	for (i = 0; i < (max + 1); i++)
 		count[i] += count[i - 1];
-		print_array(count, max + 1);
+	print_array(count, max + 1);
 
 	for (i = 0; i < (int)size; i++)
 	{
@@ -63,6 +63,6 @@ void counting_sort(int *array, size_t size)
 	for (i = 0; i < (int)size; i++)
 		array[i] = sorted[i];
 
-		free(sorted);
-		free(count);
+	free(sorted);
+	free(count);
 }
