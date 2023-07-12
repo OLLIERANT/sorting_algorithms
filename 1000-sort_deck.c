@@ -25,7 +25,7 @@ int _strcmp(const char *s1, const char *s2)
 
 	if (*s1 != *s2)
 		return (*s1 - *s2);
-		return (0);
+	return (0);
 }
 
 /**
@@ -62,7 +62,7 @@ char get_value(deck_node_t *card)
 		return (11);
 	if (_strcmp(card->card->value, "Queen") == 0)
 		return (12);
-		return (13);
+	return (13);
 }
 
 /**
@@ -80,16 +80,17 @@ void insertion_sort_deck_kind(deck_node_t **deck)
 		while (insert != NULL && insert->card->kind > iter->card->kind)
 		{
 			insert->next = iter->next;
+
 			if (iter->next != NULL)
 				iter->next->prev = insert;
-				iter->prev = insert->prev;
-				iter->next = insert;
+			iter->prev = insert->prev;
+			iter->next = insert;
 			if (insert->prev != NULL)
 				insert->prev->next = iter;
 			else
 				*deck = iter;
-				insert->prev = iter;
-				insert = iter->prev;
+			insert->prev = iter;
+			insert = iter->prev;
 		}
 	}
 }
@@ -114,14 +115,14 @@ void insertion_sort_deck_value(deck_node_t **deck)
 			insert->next = iter->next;
 			if (iter->next != NULL)
 				iter->next->prev = insert;
-				iter->prev = insert->prev;
-				iter->next = insert;
+			iter->prev = insert->prev;
+			iter->next = insert;
 			if (insert->prev != NULL)
 				insert->prev->next = iter;
 			else
 				*deck = iter;
-				insert->prev = iter;
-				insert = iter->prev;
+			insert->prev = iter;
+			insert = iter->prev;
 		}
 	}
 }
